@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  /* DARK MODE (Default per user request) - RESTORED ORIGINAL COLORS */
+  --surface: #000000;
+  --on-surface: #e7e5e8;
+  --surface-container: #0a0a0b;
+  --surface-variant: #121214;
+  --on-surface-variant: #acaaae;
+  --primary: #3dba7f;
+  --on-primary: #000000;
+  --background: #000000;
+  --on-background: #ffffff;
+  --outline: #303030;
+  --outline-variant: #48484b;
+
+  /* Additional tokens for better consistency */
+  --text-stroke: #3dba7f;
+  --shadow-color: #000000;
+  --card-bg: #0a0a0b;
+}
+
+.light-mode {
+  /* LIGHT MODE (Brutalist aesthetic) */
+  --surface: #f0eee8;
+  --on-surface: #0a0a0b;
+  --surface-container: #e7e5e0;
+  --surface-variant: #dedcd5;
+  --on-surface-variant: #48484b;
+  --primary: #1b8d56;
+  --on-primary: #ffffff;
+  --background: #f0eee8;
+  --on-background: #0a0a0b;
+  --outline: #0a0a0b;
+  --outline-variant: #a7a5a0;
+
+  /* Additional tokens */
+  --text-stroke: #0a0a0b;
+  --shadow-color: #0a0a0b66;
+  --card-bg: #ffffff;
+}
+
+@theme {
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-card-bg: var(--card-bg);
+
+  --radius-DEFAULT: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-label: "DM Mono", monospace;
+  --font-brand: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  html {
+    height: initial;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .cursor-lens {
+    mix-blend-mode: exclusion !important;
+  }
+
+  html,
+  body {
+    cursor: none !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  .interactive {
+    cursor: none !important;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .syne-800 {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+  }
+  .dm-mono {
+    font-family: "DM Mono", monospace;
+  }
+  .outline-text {
+    -webkit-text-stroke: 1px var(--text-stroke);
+    color: transparent;
+  }
+  .tonal-shift {
+    transition: background-color 0.3s ease;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+}
