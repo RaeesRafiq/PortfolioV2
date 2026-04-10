@@ -1,4 +1,4 @@
-# Mohammad Rayees | Full-Stack Developer & Designer Portfolio
+# Mohammad Rayees | Full-Stack Developer Portfolio
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
