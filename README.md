@@ -5,6 +5,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF00C1?logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
+**🔴 Live Demo:** [raeesrafiq-portfolio.vercel.app](https://raeesrafiq-portfolio.vercel.app)
+
 A high-performance, modern portfolio built with **React 19** and **Vite**, featuring a brutalist-inspired dark aesthetic, smooth animations, and a seamless user experience.
 
 ---
@@ -84,7 +86,7 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 **Mohammad Rayees**  
 Full-Stack Developer & Designer  
-[LinkedIn](https://linkedin.com/in/raees-rafiq) | [Email] (mohammadrayeespatto@gmail.com)
+[LinkedIn](https://linkedin.com/in/raees-rafiq) | [Email](mailto:mohammadrayeespatto@gmail.com)
 
 ---
 

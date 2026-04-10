@@ -49,7 +49,7 @@ const itemVariants = {
  * @param {string} props.description - Project summary.
  * @param {string[]} props.tags - Technology stack tags.
  */
-const ProjectCard = ({ title, description, tags }) => {
+const ProjectCard = ({ title, description, tags, liveLink, sourceLink }) => {
   const cardRef = useRef(null);
 
   // Motion values for normalized tracking
@@ -133,16 +133,30 @@ const ProjectCard = ({ title, description, tags }) => {
 
         {/* Action interfaces for source and deployment links */}
         <div className="flex gap-4" style={{ transform: "translateZ(20px)" }}>
-          <button className="flex items-center gap-2 border border-on-surface/15 bg-background px-5 py-2.5 dm-mono text-[11px] font-bold uppercase text-on-surface hover:bg-primary hover:text-background transition-all shadow-[4px_4px_0px_0px_var(--primary)] hover:shadow-none">
-            <span className="material-symbols-outlined text-sm">folder</span>
-            Source
-          </button>
-          <button className="flex items-center gap-2 border border-on-surface/15 bg-background px-5 py-2.5 dm-mono text-[11px] font-bold uppercase text-on-surface hover:bg-primary hover:text-background transition-all shadow-[4px_4px_0px_0px_var(--primary)] hover:shadow-none">
-            <span className="material-symbols-outlined text-sm">
-              open_in_new
-            </span>
-            Live Demo
-          </button>
+          {sourceLink && (
+            <a
+              href={sourceLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-on-surface/15 bg-background px-5 py-2.5 dm-mono text-[11px] font-bold uppercase text-on-surface hover:bg-primary hover:text-background transition-all shadow-[4px_4px_0px_0px_var(--primary)] hover:shadow-none"
+            >
+              <span className="material-symbols-outlined text-sm">folder</span>
+              Source
+            </a>
+          )}
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-on-surface/15 bg-background px-5 py-2.5 dm-mono text-[11px] font-bold uppercase text-on-surface hover:bg-primary hover:text-background transition-all shadow-[4px_4px_0px_0px_var(--primary)] hover:shadow-none"
+            >
+              <span className="material-symbols-outlined text-sm">
+                open_in_new
+              </span>
+              Live Demo
+            </a>
+          )}
         </div>
       </motion.div>
     </div>
@@ -160,6 +174,8 @@ const Projects = () => {
       description:
         "A high-performance Neo-Brutalist showcase featuring interactive 3D physics, custom Framer Motion dynamics, and a signature dark-mode aesthetic. Built for speed and visual impact.",
       tags: ["React", "Framer Motion", "Tailwind CSS", "Vite", "Lucide", "V0"],
+      liveLink: "https://raeesrafiq-portfolio.vercel.app",
+      sourceLink: "https://github.com/RaeesRafiq/PortfolioV2",
     },
     {
       title: "SmartQuack",
