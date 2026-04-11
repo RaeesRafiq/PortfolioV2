@@ -178,27 +178,20 @@ const Projects = () => {
       sourceLink: "https://github.com/RaeesRafiq/PortfolioV2",
     },
     {
-      title: "SmartQuack",
+      title: "Esignify",
       description:
-        "Gamified task manager featuring a reactive duck mascot that tracks your productivity progress across multiple platforms.",
-      tags: ["Flutter", "Riverpod", "Firebase", "Hive", "Dart"],
-    },
-    {
-      title: "HyperNode",
-      description:
-        "Distributed infrastructure monitor built for high-performance scale, featuring real-time node health metrics and visualization.",
-      tags: ["Node.js", "GraphQL", "PostgreSQL", "Socket.io", "React"],
-    },
-    {
-      title: "Vivid UI",
-      description:
-        "A comprehensive design system library for modern web applications, focusing on glassmorphism and accessibility standard compliance.",
+        "Developed a machine learning-based signature verification system using OpenCV and ensemble models (SVM, Random Forest), achieving 90%+ accuracy. Integrated OCR (Tesseract) for automated IFSC code extraction and built a responsive Flask web application for secure, real-time document verification.",
       tags: [
-        "Storybook",
-        "TypeScript",
-        "Vanilla CSS",
-        "Rollup",
-        "Accessibility",
+        "Python",
+        "Flask",
+        "OpenCV",
+        "scikit-learn",
+        "NumPy",
+        "Tesseract OCR",
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "JavaScript",
       ],
     },
   ];

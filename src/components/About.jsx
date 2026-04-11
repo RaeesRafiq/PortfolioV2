@@ -91,18 +91,19 @@ const About = () => {
         >
           <motion.div className="space-y-6 text-lg md:text-xl text-on-surface/80 leading-relaxed max-w-xl">
             <motion.p variants={bioVariants}>
-              I'm a passionate developer specializing in high-performance
-              full-stack applications, with a deep interest in building clean,
-              resilient, and user-centric digital experiences. My approach
-              bridges the gap between complex backend systems and sophisticated
-              user interfaces, rooted in the philosophy that software should be
-              as intuitive as it is technically rigorous.
+              Full-Stack Developer with expertise in designing and building
+              scalable, high-performance web applications across both frontend
+              and backend systems. Proficient in React, Next.js, and modern
+              full-stack ecosystems, with strong experience in debugging,
+              security auditing, and optimizing code for reliability and
+              efficiency.
             </motion.p>
             <motion.p variants={bioVariants}>
-              With a foundation in Computer Science and experience across mobile
-              and web platforms, I believe in the power of minimal design and
-              well-crafted code to communicate ideas effectively—blending
-              architectural integrity with a unique creative sensibility.
+              Adept at analyzing and improving code quality, ensuring
+              maintainable and secure software solutions. Passionate about clean
+              architecture, best coding practices, and delivering robust
+              applications that effectively bridge complex technical
+              requirements with practical implementation.
             </motion.p>
           </motion.div>
         </motion.div>

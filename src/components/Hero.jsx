@@ -6,6 +6,8 @@
 
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import resumeFile from "../assets/Resume-MohammadRayees.pdf";
+
 
 /**
  * Particle class for the background canvas animation.
@@ -318,7 +320,7 @@ const Hero = ({ theme }) => {
 
   return (
     <section
-      className="relative min-h-screen w-full flex flex-col items-center justify-center md:justify-end pb-12 md:pb-20 overflow-hidden bg-surface"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center pb-12 overflow-hidden bg-surface"
       id="hero"
     >
       <canvas
@@ -329,25 +331,33 @@ const Hero = ({ theme }) => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <motion.div
-        className="relative z-10 text-center pointer-events-none"
+        className="relative z-10 text-center pointer-events-none pt-24 md:pt-32"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="syne-800 text-5xl md:text-[8rem] leading-[0.9] tracking-tighter text-on-surface mb-8 md:mb-16 pointer-events-auto"
+          className="syne-800 text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] leading-[0.9] tracking-tighter text-on-surface mb-10 md:mb-14 pointer-events-auto"
           variants={sentence}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
         >
+          <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl block mb-4 opacity-80 tracking-normal">
+            {"Hi, I am".split("").map((char, index) => (
+              <motion.span key={`hi-${index}`} variants={letter}>
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </span>
           {"Mohammad".split("").map((char, index) => (
-            <motion.span key={index} variants={letter}>
+            <motion.span key={`mohammad-${index}`} variants={letter}>
               {char}
             </motion.span>
           ))}
           <br />
           <span
+            className="block"
             style={{
               WebkitTextStrokeWidth: "1.5px",
               WebkitTextStrokeColor: "var(--primary)",
@@ -355,7 +365,7 @@ const Hero = ({ theme }) => {
             }}
           >
             {"Rayees.".split("").map((char, index) => (
-              <motion.span key={index} variants={letter}>
+              <motion.span key={`rayees-${index}`} variants={letter}>
                 {char}
               </motion.span>
             ))}
@@ -363,7 +373,7 @@ const Hero = ({ theme }) => {
         </motion.h1>
 
         <motion.div
-          className="mb-12 md:mb-16 h-10 flex items-center justify-center"
+          className="mb-10 md:mb-12 h-10 flex items-center justify-center"
           variants={fadeUpVariants}
         >
           <span className="dm-mono text-lg md:text-xl text-primary tracking-wider">
@@ -385,7 +395,8 @@ const Hero = ({ theme }) => {
           >
             <a
               className="relative px-12 py-6 bg-on-surface text-background font-bold tracking-[0.2em] uppercase text-sm border-2 border-primary shadow-[8px_8px_0px_0px_var(--primary)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all flex items-center gap-3"
-              href="#contact"
+              href={resumeFile}
+              download="Mohammad_Rayees_Resume.pdf"
             >
               Download Resume
               <span className="material-symbols-outlined group-hover:rotate-180 transition-transform">
